@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>srcnav - Semantic Code Navigation for AI Agents</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">srcnav</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#comparison">Compare</a></li>
+                <li><a href="#benchmarks">Benchmarks</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title"><span class="brand">srcnav</span></h1>
+            <h3>Code Navigation for AI Agents</h3>
+            <p class="hero-subtitle">Give your AI the context it needs</p>
+            <p class="hero-description">
+                <span class="brand-highlight">srcnav</span> provides semantic code search.<br>
+                400x better signal-to-noise. 93x faster.<br>
+                Built for AI agents, by AI developers.
+            </p>
+            <a href="#comparison" class="btn">See How It Works</a>
+        </div>
+    </section>
+
+    <section class="who-for-short">
+        <p>For <span class="brand-highlight">Vibe Coders</span>. For <span class="brand-highlight">Software Developers</span>. For <span class="brand-highlight">AI Builders</span>.</p>
+    </section>
+
+    <main class="split-screen">
+        <!-- LEFT SIDE: Without srcnav -->
+        <div class="side without">
+            <div class="side-content">
+                <section class="side-hero">
+                    <div class="side-badge">WITHOUT</div>
+                    <h1>grep</h1>
+                    <p class="side-tagline">Traditional string matching</p>
+                    
+                    <div class="side-stats">
+                        <div class="stat">
+                            <span class="stat-num">20k+</span>
+                            <span class="stat-label">matches for "create"</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-num">~4s</span>
+                            <span class="stat-label">query time</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-num">15k</span>
+                            <span class="stat-label">avg tokens/query</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-num">strings</span>
+                            <span class="stat-label">what it finds</span>
+                        </div>
+                    </div>
+
+                    <div class="terminal">
+                        <div class="terminal-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="terminal-body">
+                            <p><span class="prompt">$</span> grep -r "create" .</p>
+                            <p class="output">20,077 matches</p>
+                            <p class="output">// includes comments</p>
+                            <p class="output">// includes strings</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="side-section">
+                    <h2>Limitations</h2>
+                    <ul class="problem-list">
+                        <li>Matches everything with the string</li>
+                        <li>No concept of definitions vs usage</li>
+                        <li>No dependency tracking</li>
+                        <li>No impact analysis</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE: With srcnav -->
+        <div class="side with">
+            <div class="side-content">
+                <section class="side-hero">
+                    <div class="side-badge">WITH</div>
+                    <h1>srcnav</h1>
+                    <p class="side-tagline">Semantic code navigation</p>
+                    
+                    <div class="side-stats">
+                        <div class="stat">
+                            <span class="stat-num">50</span>
+                            <span class="stat-label">definitions for "create"</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-num">~43ms</span>
+                            <span class="stat-label">query time</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-num">500</span>
+                            <span class="stat-label">avg tokens/query</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-num">semantic</span>
+                            <span class="stat-label">what it finds</span>
+                        </div>
+                    </div>
+
+                    <div class="terminal">
+                        <div class="terminal-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="terminal-body">
+                            <p><span class="prompt">$</span> srcnav find "create"</p>
+                            <p class="success">50 definitions</p>
+                            <p class="success">JSON output</p>
+                            <p class="success">Impact analysis</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="side-section">
+                    <h2>Capabilities</h2>
+                    <ul class="benefit-list">
+                        <li>Finds actual definitions</li>
+                        <li>Full dependency graph</li>
+                        <li>Instant impact analysis</li>
+                        <li>JSON output for AI agents</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <section id="comparison" class="what-ai-knows">
+        <h2 class="section-title">What srcnav Gives Your AI</h2>
+        
+        <div class="ai-comparison">
+            <div class="ai-block">
+                <h3>grep</h3>
+                <div class="ai-terminal">
+                    <pre><code>$ grep -r "create" .
+20,077 matches in files
+// Strings, comments, everything</code></pre>
+                </div>
+                <p class="ai-problem">AI must process thousands of lines</p>
+                <p class="ai-problem">Manual filtering required</p>
+            </div>
+            
+            <div class="ai-block highlight">
+                <h3>srcnav</h3>
+                <div class="ai-terminal">
+                    <pre><code>$ srcnav find "create"
+{
+  "definitions": 50,
+  "format": "json",
+  "time": "43ms"
+}</code></pre>
+                </div>
+                <p class="ai-benefit">Clean, structured results</p>
+                <p class="ai-benefit">Ready for AI consumption</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="feature-comparison">
+        <h2 class="section-title">Feature Comparison</h2>
+        
+        <div class="comp-grid">
+            <div class="comp-header"></div>
+            <div class="comp-header">grep</div>
+            <div class="comp-header srcnav">srcnav</div>
+            
+            <div class="comp-row"><span>Finds definitions</span><span class="no">✗</span><span class="yes">✓</span></div>
+            <div class="comp-row"><span>Filters comments/strings</span><span class="no">✗</span><span class="yes">✓</span></div>
+            <div class="comp-row"><span>Shows signatures</span><span class="no">✗</span><span class="yes">✓</span></div>
+            <div class="comp-row"><span>Impact analysis</span><span class="no">✗</span><span class="yes">✓</span></div>
+            <div class="comp-row"><span>Dependency graph</span><span class="no">✗</span><span class="yes">✓</span></div>
+            <div class="comp-row"><span>JSON output</span><span class="no">✗</span><span class="yes">✓</span></div>
+            <div class="comp-row"><span>AI agent ready</span><span class="no">✗</span><span class="yes">✓</span></div>
+            <div class="comp-row"><span>Sub-second queries</span><span class="no">✗</span><span class="yes">✓</span></div>
+            <div class="comp-row"><span>Token reduction</span><span class="no">✗</span><span class="yes">✓</span></div>
+        </div>
+    </section>
+
+    <section class="efficiency">
+        <h2 class="section-title">Why This Matters</h2>
+        
+        <div class="efficiency-visual">
+            <div class="eff-chart">
+                <h3>Signal-to-Noise Ratio (Benchmark: TypeScript codebase)</h3>
+                <div class="chart-bars">
+                    <div class="chart-item">
+                        <div class="chart-label">grep "create"</div>
+                        <div class="bar-container">
+                            <div class="bar linear" style="height: 100%"></div>
+                        </div>
+                        <div class="bar-value">20,077 matches</div>
+                    </div>
+                    <div class="chart-item">
+                        <div class="chart-label">srcnav find "create"</div>
+                        <div class="bar-container">
+                            <div class="bar srcnav" style="height: 5%"></div>
+                        </div>
+                        <div class="bar-value">50 definitions</div>
+                    </div>
+                </div>
+                <div class="chart-legend">
+                    <span class="legend-item"><span class="legend-color bad"></span> grep: all string matches</span>
+                    <span class="legend-item"><span class="legend-color good"></span> srcnav: actual definitions</span>
+                </div>
+                <p class="chart-note">400x fewer results to process = less context for AI to read</p>
+            </div>
+            
+            <div class="eff-stats">
+                <div class="eff-stat">
+                    <span class="eff-num bad">400x</span>
+                    <span class="eff-label">Better signal-to-noise</span>
+                </div>
+                <div class="eff-stat">
+                    <span class="eff-num good">93x</span>
+                    <span class="eff-label">Faster queries (43ms vs 4s)</span>
+                </div>
+                <div class="eff-stat">
+                    <span class="eff-num good">213K</span>
+                    <span class="eff-label">Items affected by a change</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tests" class="test-results">
+        <h2 class="section-title">Real Test Results</h2>
+        
+        <div class="results-table">
+            <div class="results-header">
+                <span>Search</span>
+                <span>grep</span>
+                <span>srcnav</span>
+                <span>Improvement</span>
+            </div>
+            <div class="results-row">
+                <span class="symbol">createUser (React)</span>
+                <span class="bad">40</span>
+                <span class="good">4</span>
+                <span class="good">10x</span>
+            </div>
+            <div class="results-row">
+                <span class="symbol">createUser (Next.js)</span>
+                <span class="bad">33</span>
+                <span class="good">11</span>
+                <span class="good">3x</span>
+            </div>
+            <div class="results-row highlight">
+                <span class="symbol">create (TypeScript)</span>
+                <span class="bad">20,077</span>
+                <span class="good">50</span>
+                <span class="good">400x</span>
+            </div>
+        </div>
+
+        <div class="results-table">
+            <div class="results-header">
+                <span>Codebase</span>
+                <span>Files</span>
+                <span>grep</span>
+                <span>srcnav</span>
+                <span>Speedup</span>
+            </div>
+            <div class="results-row">
+                <span class="symbol">React</span>
+                <span>4,435</span>
+                <span class="bad">~1.1s</span>
+                <span class="good">~50ms</span>
+                <span class="good">22x</span>
+            </div>
+            <div class="results-row">
+                <span class="symbol">Next.js</span>
+                <span>17,914</span>
+                <span class="bad">~4.5s</span>
+                <span class="good">~43ms</span>
+                <span class="good">105x</span>
+            </div>
+            <div class="results-row highlight">
+                <span class="symbol">TypeScript</span>
+                <span>39,166</span>
+                <span class="bad">~4.0s</span>
+                <span class="good">~43ms</span>
+                <span class="good">93x</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="cant-do">
+        <h2 class="section-title">What grep Can't Do</h2>
+        
+        <div class="cant-do-grid">
+            <div class="cant-do-card">
+                <div class="cant-do-icon">💥</div>
+                <h3>Impact Analysis</h3>
+                <p class="cant-do-cmd">srcnav analyze impact "createElement"</p>
+                <p class="cant-do-result">213,859 items affected</p>
+            </div>
+            <div class="cant-do-card">
+                <div class="cant-do-icon">🔗</div>
+                <h3>Dependency Graph</h3>
+                <p class="cant-do-cmd">srcnav query deps-of "index.ts"</p>
+                <p class="cant-do-result">Full JSON dependency list</p>
+            </div>
+            <div class="cant-do-card">
+                <div class="cant-do-icon">📊</div>
+                <h3>Symbol Types</h3>
+                <p class="cant-do-cmd">srcnav find "useState"</p>
+                <p class="cant-do-result">8 definitions with types</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="benchmarks" class="benchmarks">
+        <h2 class="section-title">Performance Benchmarks</h2>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">281,944</div>
+                <div class="stat-label">Symbols Indexed</div>
+                <div class="stat-context">TypeScript compiler</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">76s</div>
+                <div class="stat-label">Index Time</div>
+                <div class="stat-context">~40k files</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">43ms</div>
+                <div class="stat-label">Query Time</div>
+                <div class="stat-context">after indexing</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">95%</div>
+                <div class="stat-label">Less Context</div>
+                <div class="stat-context">for AI</div>
+            </div>
+        </div>
+
+        <div class="full-benchmark-table">
+            <div class="bench-header">
+                <span>Project</span>
+                <span>Files</span>
+                <span>Lines</span>
+                <span>Symbols</span>
+                <span>Index</span>
+                <span>Query</span>
+            </div>
+            <div class="bench-row">
+                <span class="bench-name">React</span>
+                <span>4,435</span>
+                <span>~532k</span>
+                <span>61,583</span>
+                <span>7s</span>
+                <span class="fast">~50ms</span>
+            </div>
+            <div class="bench-row">
+                <span class="bench-name">Next.js</span>
+                <span>17,914</span>
+                <span>~1.1M</span>
+                <span>71,376</span>
+                <span>11s</span>
+                <span class="fast">~43ms</span>
+            </div>
+            <div class="bench-row">
+                <span class="bench-name">VS Code</span>
+                <span>6,437</span>
+                <span>~1.7M</span>
+                <span>257,969</span>
+                <span>21s</span>
+                <span class="fast">~5ms</span>
+            </div>
+            <div class="bench-row">
+                <span class="bench-name">TypeScript</span>
+                <span>39,166</span>
+                <span>~455k</span>
+                <span>281,944</span>
+                <span>76s</span>
+                <span class="fast">~43ms</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="use-cases">
+        <h2 class="section-title">What AI Can Now Do</h2>
+        
+        <div class="use-case-grid">
+            <div class="use-case-card">
+                <div class="use-case-icon">🔨</div>
+                <h3>Safe Refactoring</h3>
+                <p>AI knows every caller. Updates all references correctly.</p>
+            </div>
+            <div class="use-case-card">
+                <div class="use-case-icon">🐛</div>
+                <h3>Find Real Bugs</h3>
+                <p>Trace data flow end-to-end. Find missing validation.</p>
+            </div>
+            <div class="use-case-card">
+                <div class="use-case-icon">🗺️</div>
+                <h3>Map Architecture</h3>
+                <p>Full dependency graph. Find circular deps.</p>
+            </div>
+            <div class="use-case-card">
+                <div class="use-case-icon">📖</div>
+                <h3>True Understanding</h3>
+                <p>Instantly find any function, see all usages.</p>
+            </div>
+            <div class="use-case-card">
+                <div class="use-case-icon">💰</div>
+                <h3>Context Efficiency</h3>
+                <p>95% less context tokens. 25x cheaper AI.</p>
+            </div>
+            <div class="use-case-card">
+                <div class="use-case-icon">🚀</div>
+                <h3>Scale Up</h3>
+                <p>50k files? No problem. Any codebase size.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing">
+        <h2 class="section-title">Why srcnav?</h2>
+        
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <div class="pricing-title">grep</div>
+                <div class="pricing-content">
+                    <p>Fast string matching</p>
+                    <p>Good for TODO comments</p>
+                    <p>Works everywhere</p>
+                </div>
+            </div>
+            <div class="pricing-card featured">
+                <div class="pricing-badge">FOR AI AGENTS</div>
+                <div class="pricing-title">srcnav</div>
+                <div class="pricing-content">
+                    <p>Semantic code understanding</p>
+                    <p>JSON output for AI</p>
+                    <p>Impact analysis</p>
+                    <p>400x better signal-to-noise</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="languages">
+        <h2 class="section-title">Supported Languages</h2>
+        
+        <div class="languages-grid">
+            <div class="language-card">
+                <img src="https://raw.githubusercontent.com/github/explore/main/topics/python/python.png" alt="Python" class="lang-icon">
+                <span class="lang-name">Python</span>
+            </div>
+            <div class="language-card">
+                <img src="https://raw.githubusercontent.com/github/explore/main/topics/rust/rust.png" alt="Rust" class="lang-icon">
+                <span class="lang-name">Rust</span>
+            </div>
+            <div class="language-card">
+                <img src="https://raw.githubusercontent.com/github/explore/main/topics/go/go.png" alt="Go" class="lang-icon">
+                <span class="lang-name">Go</span>
+            </div>
+            <div class="language-card">
+                <img src="https://raw.githubusercontent.com/github/explore/main/topics/java/java.png" alt="Java" class="lang-icon">
+                <span class="lang-name">Java</span>
+            </div>
+            <div class="language-card">
+                <img src="https://raw.githubusercontent.com/github/explore/main/topics/c/c.png" alt="C" class="lang-icon">
+                <span class="lang-name">C</span>
+            </div>
+            <div class="language-card">
+                <img src="https://raw.githubusercontent.com/github/explore/main/topics/cpp/cpp.png" alt="C++" class="lang-icon">
+                <span class="lang-name">C++</span>
+            </div>
+            <div class="language-card">
+                <img src="https://raw.githubusercontent.com/github/explore/main/topics/typescript/typescript.png" alt="TypeScript" class="lang-icon">
+                <span class="lang-name">TypeScript</span>
+            </div>
+            <div class="language-card">
+                <img src="https://raw.githubusercontent.com/github/explore/main/topics/javascript/javascript.png" alt="JavaScript" class="lang-icon">
+                <span class="lang-name">JavaScript</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="who-for">
+        <h2 class="section-title">Who is srcnav for?</h2>
+        
+        <div class="who-for-grid">
+            <div class="who-for-card">
+                <div class="who-for-icon">🎵</div>
+                <h3>Vibe Coders</h3>
+                <p>Takes the Vibes out of vibe coding. Give your AI real codebase understanding, not just pattern matching.</p>
+            </div>
+            <div class="who-for-card">
+                <div class="who-for-icon">💻</div>
+                <h3>Software Developers</h3>
+                <p>Full codebase intelligence for professional development. Safe refactors, instant impact analysis.</p>
+            </div>
+            <div class="who-for-card">
+                <div class="who-for-icon">🤖</div>
+                <h3>AI Agent Builders</h3>
+                <p>Add semantic code navigation to your coding agents. JSON output ready for AI consumption.</p>
+            </div>
+            <div class="who-for-card">
+                <div class="who-for-icon">🛠️</div>
+                <h3>DevTools Companies</h3>
+                <p>Power your product with semantic search. Fast, accurate, scales to any codebase.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="cta">
+        <h2>Get Started with <span class="brand-highlight">srcnav</span></h2>
+        <p>Built for AI agents. Works with Python, Rust, Go, Java, C, C++, TypeScript, JavaScript.</p>
+        <a href="mailto:djtinkers365@protonmail.com" class="btn">Request Access</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 <span class="brand-highlight">srcnav</span></p>
+    </footer>
+</body>
+</html>
